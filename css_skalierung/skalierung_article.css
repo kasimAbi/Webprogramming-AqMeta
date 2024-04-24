@@ -1,0 +1,23 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 810px) {
+  .hauptteil {
+    height: 1000px;
+    margin-top: 15%;
+  }
+
+  .shop-art-flex {
+    flex-direction: column;
+    width: 500px;
+    height: 1000px;
+  }
+
+  .prev, .next {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .shop-art-flex {
+    width: 300px;
+  }
+}

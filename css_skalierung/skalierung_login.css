@@ -1,0 +1,6 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 810px) {
+  .hauptteil {
+    margin-top: 15%;
+  }
+}

@@ -1,0 +1,62 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media (max-width: 900px) {
+  .hauptteil {
+    margin-top: 10%;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 2px;
+  }
+
+  .form {
+    grid-template-columns: 350px;
+    max-width: 350px;
+  }
+
+  .contact-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+  }
+
+  .contact-form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .text {
+    margin: 16px 0 24px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-info:before {
+    display: none;
+  }
+
+  form, .contact-info {
+    padding: 27px 25.5px;
+  }
+
+  .text, .information {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 18.5px;
+  }
+
+  .icon {
+    width: 23px
+  }
+
+  .input {
+    padding: 7px 19px;
+  }
+
+  .btn {
+    padding: 7px 19px;
+  }
+}

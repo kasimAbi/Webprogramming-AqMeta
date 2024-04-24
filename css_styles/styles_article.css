@@ -1,0 +1,172 @@
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  /* nciht mehr unterstrichen */
+  text-decoration: none;
+}
+
+/* hauptteil der Seite */
+.hauptteil {
+  margin-top: 12%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* flex container */
+.shop-art-flex {
+  position: relative;
+  margin: 0 auto;
+  /* hintergrund schwarz aber transparenz auf 0.15 */
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  width: 750px;
+  height: 500px;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* erste flexbox (für slide show) */
+.shop-art-box-1 {
+  width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* bilder wechseln buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position der "next button" zu right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* bei hover, ein schwarzes hintergrund Farbe mit etwas durchsichtigkeit */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Bilderreihenfolge (1/3 usw.) */
+.numbertext {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* keyframes für bestimmte internet  Browser */
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*  zweite flex box (für informationen) */
+.shop-art-box-2 {
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+/* für bilder */
+.shop-art-bild {
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+}
+
+/* für beschreibung */
+.article-description {
+  margin-top: 50px;
+}
+
+/* select box */
+.select-box {
+  position: relative;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.select-box select {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-family: berlin, sans-serif;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* design von warenkorb button */
+.button-warenkorb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  padding: 0;
+  margin-top: 30px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background: #009578;
+}
+
+.button-warenkorb:hover {
+  background: #009000;
+}

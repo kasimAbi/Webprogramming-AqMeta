@@ -1,0 +1,104 @@
+/* seiten information über uns */
+p {
+  color: black;
+  overflow: hidden;
+  font-weight: 700;
+  font-family: berlin, sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.hauptteil {
+  min-height: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: 120px;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* für die gif -> container  */
+.main-flex {
+  position: relative;
+  background: rgba(255, 255, 255);
+  height: 200px;
+  width: 94%;
+  max-height: 1530px;
+  max-width: 2024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* box für einzelne gifs */
+.main-box {
+  width: 280px;
+  height: 160px;
+  z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gif-bild {
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* bild unsichtbar machen, um das gif was dahinter ist anzuzeigen */
+.gif-bild:hover {
+  opacity: 0;
+}
+
+.gif {
+  position: absolute;
+  width: 280px;
+  height: 160px;
+  margin: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* der hauptteil des Fensters. Das Logo in der Mitte der Seite und die Information für den Besucher der Seite */
+.header-flex {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  width: 60%;
+  margin: 4% auto;
+  max-height: 1530px;
+  max-width: 2024px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* boxen des containers */
+.header-box {
+  flex: 1;
+  z-index: 1;
+  margin: 2%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* max. größe vom Logo */
+.header-box:first-child {
+  margin: 2%;
+  margin-bottom: 20%;
+  max-width: 30%;
+  box-sizing: border-box;
+}
+
+/* Große Titel Bild */
+.vorschau-bild {
+  width: 80%;
+  height: auto;
+  margin: 0 10%;
+  box-sizing: border-box;
+}

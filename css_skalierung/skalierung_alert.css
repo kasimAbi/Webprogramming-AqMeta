@@ -1,0 +1,14 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 550px) {
+  #alertBox {
+    width: 300px;
+  }
+
+  #alertBox h3 {
+    font-size: 18px;
+  }
+
+  #alertBox .close {
+    font-size: 16px;
+  }
+}

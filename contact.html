@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css dateien einbinden  -->
+  <link rel="stylesheet" href="css_styles/styles_allgemein.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_allgemein.css">
+  <link rel="stylesheet" href="css_styles/styles_contact.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_contact.css">
+
+  <!-- javascript dateien einbinden -->
+  <script src="js/script_contact.js"></script>
+
+  <!-- die originale pixelgröße auf allen geräten und größen beibehalten -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- titel der seite  -->
+  <title>AqMeta-Kontakt</title>
+</head>
+
+<body>
+  <!-- z-index: 5 damit das immer im vordergrund bleibt und über jedes element drüber geht.  -->
+  <nav style="z-index: 5;">
+    <!-- ungeordnete liste -->
+    <ul>
+      <li><a href="index.html" style="padding: 0;"><img alt="" src="img/logo.png" title="AqMeta" class="logo_bild"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kat_shop.html">Shop</a>
+        <ul>
+          <li><a href="kat_boards.html">Boards</a></li>
+          <li><a href="kat_swimwear.html">Swimwear</a></li>
+          <li><a href="kat_equip.html">Equipment</a></li>
+          <li><a href="kat_merch.html">Merch</a></li>
+        </ul>
+      </li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="contact.html" style="color: #388bba;">Kontakt</a></li> <!-- da die aktuelle seite der contact ist, soll bei der navigation entsprechend gekennzeichnet sein..  -->
+    </ul>
+  </nav>
+
+  <!-- hauptfenster -->
+  <main class="hauptteil">
+    <!-- flex-container -->
+    <div class="container">
+      <!-- flex box / grid aus 2 spalten, jeweils 410px-->
+      <div class="form">
+        <!-- informationen und aufforderungen für das kontaktieren an den benutzer -->
+        <div class="contact-info">
+          <h3 class="title">Lass uns Kontakt aufnehmen!</h3>
+          <p class="text">
+            Du hast etwas nazumerken? Oder einfach nur eine Frage? Scheue dich nicht, direkt auf uns zuzugehen.<br>Wir versuchen deine Anfrage so schnell wie möglich zu beantworten.
+          </p>
+          <!-- flex-container -->
+          <div class="information">
+            <img src="img/location.png" class="icon" alt="" /> <!-- icon wird geladen -->
+            <p>Dr.-Arnold-Hueck-Straße 3<br>59557 Lippstadt</p>
+          </div>
+          <!-- flex-container -->
+          <div class="information">
+            <img src="img/email.png" class="icon" alt="" /> <!-- icon wird geladen -->
+            <p>aqmeta@stud.hshl.de</p>
+          </div>
+          <!-- flex-container -->
+          <div class="information">
+            <img src="img/phone.png" class="icon" alt="" /> <!-- icon wird geladen -->
+            <p>02381 8789234</p>
+          </div>
+        </div>
+
+        <!-- eingaben vom benutzer -->
+        <div class="contact-form">
+          <!-- form / wenn button geklickt wird, wird mailFenster geöffnet und die eingegebenen Daten werden übergeben. autovervollständigung ist aus bei der eingabe von Feldern. -->
+          <form action="mailto:kasim.mermer@stud.hshl.de" method="get" autocomplete="off">
+            <h3 class="title">Schreib uns.</h3>
+            <div class="input-container">
+              <!-- eingabe von Betreff für die e-Mail. onfocus: wenn maus auf das feld geklickt hat und onblur: wenn mit maus auf etwas anderes geklickt hat, werden entsprechende funktionen ausgeführt -->
+              <input type="text" name="subject" id="inputBetreff" class="input" onfocus="focusBetreff()" onblur="focusOutBetreff()" />
+              <label id="labelBetreff">Betreff</label>
+            </div>
+            <div class="input-container textarea">
+              <!-- eingabe von message für die e-Mail. onfocus: wenn maus auf das feld geklickt hat und onblur: wenn mit maus auf etwas anderes geklickt hat, werden entsprechende funktionen ausgeführt -->
+              <textarea name="body" id="inputMessage" class="input" onfocus="focusMessage()" onblur="focusOutMessage()"></textarea>
+              <label id="labelMessage">Nachricht</label>
+            </div>
+            <input type="submit" value="Senden" class="btn" /> <!-- bei klickt wird action bei der form ausgeführt. -->
+          </form> <!-- ende form -->
+        </div>
+      </div>
+    </div> <!-- ende container -->
+  </main>
+
+  <!-- footer -->
+  <footer style="z-index: 1;">
+    <span>Deutschland</span>
+    <span>Cookie-Einstellungen</span>
+    <span>Daten Verwalten</span>
+    <span>Datenschutz-Center</span>
+    <span>Cookies</span>
+    <span>Datenschutzerklärung</span>
+    <span>Bedingungen</span>
+  </footer>
+</body>
+
+</html>

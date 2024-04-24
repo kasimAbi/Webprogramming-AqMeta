@@ -1,0 +1,127 @@
+/* hauptteil der Seite Fenstergröße einstellen */
+.hauptteil {
+  min-height: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: 12%;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* login button */
+.btn {
+  font-weight: 700;
+  height: 40px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  cursor: default;
+}
+
+/* Card component */
+.card {
+  max-width: 350px;
+  padding: 40px 40px;
+  background-color: #F7F7F7;
+  margin: 0 auto 25px;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* Form styles */
+.eingabe-text {
+  font-size: 16px;
+  padding: 10px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+/* email und passwort eingabe styles */
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+  direction: ltr;
+  height: 45px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 4;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* wenn feld angeklickt wurde */
+.eingabe-text:focus {
+  border-color: rgb(104, 145, 162);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #388bba;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #388bba;
+}
+
+/* login button style */
+.btn.btn-signin {
+  background-color: #122e3d;
+  padding: 0px;
+  font-weight: bold;
+  font-size: 16px;
+  height: 40px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+  background-color: #0b1e27;
+}
+
+.register {
+  display: none;
+}
+
+.text-center {
+  margin: 0 auto;
+}
+
+/* nicht registriert button */
+#button-register {
+  color: #388bba;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+#button-register:hover {
+  text-decoration: underline;
+}

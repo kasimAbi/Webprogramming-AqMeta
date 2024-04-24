@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css dateien einbinden  -->
+  <link rel="stylesheet" href="css_styles/styles_index.css">
+  <link rel="stylesheet" href="css_styles/styles_allgemein.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_index.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_allgemein.css">
+  <link rel="stylesheet" href="css_styles/styles_alert.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_alert.css">
+
+  <!-- javascript dateien einbinden -->
+  <script src="js/script.js"></script>
+
+  <!-- die originale pixelgröße auf allen geräten und größen beibehalten -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- titel der seite  -->
+  <title>AqMETA-Home</title>
+</head>
+
+<!-- beim erstellen wird die funktion aufgeführt, damit wenn der benutzer angemeldet ist, er gegrüßt wird. anhand javascript function. -->
+<body onload="greetings_user()">
+  <!-- z-index: 5 damit das immer im vordergrund bleibt und über jedes element drüber geht. -->
+  <nav style="z-index: 5;">
+    <!-- ungeordnete liste -->
+    <ul>
+      <li><a href="index.html" style="padding: 0;"><img src="img/logo.png" title="AqMeta" class="logo_bild"></a></li>
+      <li><a href="index.html" style="color: #388bba;">Home</a></li> <!-- da die aktuelle seite der startseite ist, soll bei der navigation entsprechend gekennzeichnet sein. -->
+      <li><a href="kat_shop.html">Shop</a>
+        <ul>
+          <li><a href="kat_boards.html">Boards</a></li>
+          <li><a href="kat_swimwear.html">Swimwear</a></li>
+          <li><a href="kat_equip.html">Equipment</a></li>
+          <li><a href="kat_merch.html">Merch</a></li>
+        </ul>
+      </li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ein block, welches unter bestimmten vorraussetzungen (funktionsaufruf) in der mitte des Fensters auftaucht. -->
+  <div id="alertBox">
+    <img src="img/true.png" alt="" class="image"> <!-- bild wird geladen -->
+    <h3 id="alertMessage">willkommenstext</h3> <!-- meldung -->
+    <a onclick="greetings_user()" class="close">schließen</a> <!-- schließen button um den  block zu schließen (display: none) -->
+  </div>
+
+  <!-- hauptfenster -->
+  <main class="hauptteil">
+    <figure>
+      <img alt="" src="img/surfers.png" title="AqMeta" class="vorschau-bild"> <!-- bild wird geladen -->
+    </figure>
+
+    <!-- flex-container -->
+    <div class="header-flex">
+      <!-- flex box -->
+      <div class="header-box">
+        <figure>
+          <img alt="" src="img/logo.png" title="AqMeta"> <!-- bild wird geladen -->
+        </figure>
+      </div>
+
+      <!-- flex box / etwas über uns -->
+      <div class="header-box">
+        <p>Uns liegen der Wassersport und die Natur am Herzen. Umso wichtiger ist es deshalb, dass beides geschützt und unterstützt wird. Alle unsere Boards und anderen Equipment-Gegenstände sind nachhaltig von regionalen Herstellern produzierte
+          High-End Produkte.
+          Durch den Erwerb eines AqMeta®-Produkts unterstützen sie gleichzeitig auch eine Naturschutzorganisation ihrer Wahl.
+          Unsere Vision ist es den Namen AqMeta® mit eurer Hilfe zu einem Vorreiter im Bereich Surf und Wassersport zu machen welcher mit den aktuellen Marktführern mithält und dabei auch noch eine gute Botschaft verbreitet.
+          Naturschutz und der Erhalt von diversen Aquatischen Lebensräumen in Kombination mit Wassersport und Mode sind unser Traum welchen Ihr mit uns zusammen verwirklichen könnt.</p>
+      </div>
+    </div>
+
+    <!-- flex gif-container -->
+    <div class="main-flex">
+      <!-- flex box -->
+      <div class="main-box">
+        <img alt="" src="img/gif/bild1.gif" class="gif" /> <!-- bild wird geladen -->
+        <img alt="" src="img/gif/bild1.png" class="gif-bild" /> <!-- gif wird geladen, im hintergrund vom bild -->
+      </div>
+
+      <!-- flex box -->
+      <div class="main-box">
+        <img alt="" src="img/gif/bild2.gif" class="gif" /> <!-- bild wird geladen -->
+        <img alt="" src="img/gif/bild2.png" class="gif-bild" /> <!-- gif wird geladen, im hintergrund vom bild -->
+      </div>
+
+      <!-- flex box -->
+      <div class="main-box">
+        <img alt="" src="img/gif/bild3.gif" class="gif" /> <!-- bild wird geladen -->
+        <img alt="" src="img/gif/bild3.png" class="gif-bild" /> <!-- gif wird geladen, im hintergrund vom bild -->
+      </div>
+
+      <!-- flex box -->
+      <div class="main-box">
+        <img alt="" src="img/gif/bild4.gif" class="gif" /> <!-- bild wird geladen -->
+        <img alt="" src="img/gif/bild4.png" class="gif-bild" /> <!-- gif wird geladen, im hintergrund vom bild -->
+      </div>
+    </div> <!-- flex-container -->
+  </main>
+
+  <!-- footer -->
+  <footer style="z-index: 1;">
+    <span>Deutschland</span>
+    <span>Cookie-Einstellungen</span>
+    <span>Daten Verwalten</span>
+    <span>Datenschutz-Center</span>
+    <span>Cookies</span>
+    <span>Datenschutzerklärung</span>
+    <span>Bedingungen</span>
+  </footer>
+</body>
+
+</html>

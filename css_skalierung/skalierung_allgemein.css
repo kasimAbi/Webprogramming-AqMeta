@@ -1,0 +1,66 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 950px) {
+  nav {
+    height: 85px;
+  }
+
+  nav ul li a {
+    padding: 10px 12px;
+  }
+
+  footer {
+    height: 160px;
+    /* ändert von reihe auf spalte um das die elemente untereinander angezeigt werden */
+    flex-direction: column;
+  }
+
+  footer span {
+    display: block;
+    margin: 2px;
+    font-size: 14px;
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    height: 70px;
+  }
+
+  nav ul li:first-child {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    height: 55px;
+  }
+
+  nav ul li a {
+    padding: 2px 6px;
+  }
+
+  nav ul li:first-child {
+    width: 115px;
+  }
+
+  footer {
+    height: 140px;
+  }
+
+  footer span {
+    margin: 2px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  nav {
+    height: 45px;
+  }
+
+  nav ul li:first-child {
+    width: 100px;
+  }
+}

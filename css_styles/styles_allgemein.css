@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* alle sollen diese schrift übernehmen */
+  font-family: berlin, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  /* html und body auf 100%, damit der hauptteil der seite das ganze Fenster deckt und somit der footer nicht sichtbar ist bei kleinen fenstern. */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background: white;
+  box-sizing: border-box;
+}
+
+@charset "UTF-8";
+
+/* font hochladen die im ordner der Datei drin ist */
+@font-face {
+  src: url(../data/fonts/berlin.regular.ttf);
+  font-family: berlin;
+}
+
+nav {
+  /* am anfang  der Seite positionieren und fixed machen, damit wenn man scrollt, trotzdem sichtbar und bedienbar ist */
+  top: 0;
+  margin: 0px;
+  width: 100%;
+  height: 105px;
+  position: fixed;
+  background: white;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul li {
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 1%;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+nav ul li:first-child {
+  /* ganz links positionieren. ist das Logo */
+  margin-right: auto;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+nav ul li a {
+  font-size: 20px;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: black;
+  font-family: berlin, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+nav ul li a:hover {
+  color: #265f7f;
+}
+
+nav ul ul {
+  display: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+nav ul li:hover>ul {
+  text-decoration: none;
+  overflow: hidden;
+  background: white;
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.logo_bild {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+footer {
+  /* footer */
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: #0E2531;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 125px;
+  box-sizing: border-box;
+}
+
+footer span {
+  bottom: 0;
+  color: white;
+  font-family: berlin, sans-serif;
+  border-right: 1px solid white;
+  margin-right: 0px;
+  margin-left: 5px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+footer span:last-child {
+  border: none;
+}

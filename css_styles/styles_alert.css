@@ -1,0 +1,54 @@
+* {
+  /* alle margins und paddings auf 0 setzen */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* design des alert boxes */
+#alertBox {
+  width: 500px;
+  overflow: hidden;
+  background: #f1f1f1;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: fixed;
+  /* damit das mittig am fenster liegt */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  text-align: center;
+  /* nur unter bestimmten vorraussetzungen sichtbar (auf display block in javascript stellen) */
+  display: none;
+}
+
+/* nachricht bild */
+#alertBox .image {
+  width: 100px;
+  height: auto;
+  margin: 15px 0;
+}
+
+/* beschreibung der Meldung */
+#alertBox h3 {
+  color: #333333;
+  margin: 0 0 15px;
+}
+
+/* alert fenster schließen button */
+#alertBox .close {
+  font-size: 18px;
+  color: white;
+  padding: 10px 30px;
+  /* Kennzeichnet text also klickbar */
+  cursor: pointer;
+  background-color: #122e3d;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 0 15px;
+}
+
+#alertBox .close:hover {
+  background-color: #0b1e27;
+}

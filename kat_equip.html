@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css dateien einbinden  -->
+  <link rel="stylesheet" href="css_styles/styles_shop.css">
+  <link rel="stylesheet" href="css_styles/styles_allgemein.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_allgemein.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_shop.css">
+  <link rel="stylesheet" href="css_styles/styles_alert.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_alert.css">
+
+  <!-- javascript dateien einbinden -->
+  <script src="js/script_katAlert.js"></script>
+
+  <!-- die originale pixelgröße auf allen geräten und größen beibehalten -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- titel der seite  -->
+  <title>AqMETA-Equipment</title>
+</head>
+
+<body>
+  <!-- z-index: 5 damit das immer im vordergrund bleibt und über jedes element drüber geht.  -->
+  <nav style="z-index: 5;">
+    <!-- ungeordnete liste -->
+    <ul>
+      <li><a href="index.html" style="padding: 0;"><img alt="" src="img/logo.png" title="AqMeta" class="logo_bild"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kat_shop.html" style="color: #388bba;">Shop</a> <!-- da die aktuelle seite ein teil des shops ist, soll bei der navigation entsprechend gekennzeichnet sein..  -->
+        <ul>
+          <li><a href="kat_boards.html">Boards</a></li>
+          <li><a href="kat_swimwear.html">Swimwear</a></li>
+          <li><a href="kat_equip.html" style="color: #6cadd3;">Equipment</a></li> <!-- da die aktuelle seite die kategorie equipment ist, soll bei der navigation entsprechend gekennzeichnet sein..  -->
+          <li><a href="kat_merch.html">Merch</a></li>
+        </ul>
+      </li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ein block, welches unter bestimmten vorraussetzungen (funktionsaufruf) in der mitte des Fensters auftaucht. -->
+  <div id="alertBox">
+    <img alt="" src="img/false.png" class="image"> <!-- bild wird geladen -->
+    <h3>Whooow nicht so schnell!!<br>Das Produkt wird bald verfügbar sein!!</h3> <!-- meldung -->
+    <a onclick="not_available()" class="close">schließen</a> <!-- schließen button um den  block zu schließen (display: none) -->
+  </div>
+
+  <!-- hauptfenster -->
+  <main class="hauptteil">
+    <!-- flex-container -->
+    <div class="shop-kat-flex">
+      <!-- flex box -->
+      <div class="shop-kat-box">
+        <img alt="" src="img/fin.png" class="shop-kat-bild" /> <!-- titel vom bild -->
+        <!-- bei klick  auf das Bild (bzw. overlay), soll es ein bestimmtes artikel anzeigen. -->
+        <a href="artikel3.html">
+          <!-- über das bild ein overlay ziehen mit animation. hintergrund von layout wird verpixelt. -->
+          <div class="image_overlay image_overlay_blur">
+            <div class="image_title">
+              <h2>FINNEN</h2>
+            </div>
+            <!-- beschreibung des artikels -->
+            <p class="image_description">Holt euch die ersten TurtleFins von AqMETA<br></p>
+          </div>
+        </a>
+      </div>
+
+      <!-- flex box -->
+      <div class="shop-kat-box">
+        <img alt="" src="img/segel.png" class="shop-kat-bild" /> <!-- titel vom bild -->
+        <!-- bei klick  auf das Bild (bzw. overlay), soll es ein bestimmtes artikel anzeigen. -->
+        <a href="#.html" onclick="not_available()">
+          <!-- über das bild ein overlay ziehen mit animation. hintergrund von layout wird verpixelt. -->
+          <div class="image_overlay image_overlay_blur">
+            <div class="image_title">
+              <h2>SEGEL</h2>
+            </div>
+            <!-- beschreibung des artikels -->
+            <p class="image_description">COMING SOON<br></p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- flex-container -->
+    <div class="shop-kat-flex">
+      <!-- flex box -->
+      <div class="shop-kat-box">
+        <img alt="" src="img/wachs.png" class="shop-kat-bild" /> <!-- titel vom bild -->
+        <!-- bei klick  auf das Bild (bzw. overlay), soll es ein bestimmtes artikel anzeigen. -->
+        <a href="#.html" onclick="not_available()">
+          <!-- über das bild ein overlay ziehen mit animation. hintergrund von layout wird verpixelt. -->
+          <div class="image_overlay image_overlay_blur">
+            <div class="image_title">
+              <h2>WACHS</h2>
+            </div>
+            <!-- beschreibung des artikels -->
+            <p class="image_description">COMING SOON<br></p>
+          </div>
+        </a>
+      </div>
+
+      <!-- flex box -->
+      <div class="shop-kat-box">
+        <img alt="" src="img/tool.png" class="shop-kat-bild" /> <!-- titel vom bild -->
+        <!-- bei klick  auf das Bild (bzw. overlay), soll es ein bestimmtes artikel anzeigen. -->
+        <a href="#.html" onclick="not_available()">
+          <!-- über das bild ein overlay ziehen mit animation. hintergrund von layout wird verpixelt. -->
+          <div class="image_overlay image_overlay_blur">
+            <div class="image_title">
+              <h2>TOOLS</h2>
+            </div>
+            <!-- beschreibung des artikels -->
+            <p class="image_description">COMING SOON<br></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer style="z-index: 1;">
+    <span>Deutschland</span>
+    <span>Cookie-Einstellungen</span>
+    <span>Daten Verwalten</span>
+    <span>Datenschutz-Center</span>
+    <span>Cookies</span>
+    <span>Datenschutzerklärung</span>
+    <span>Bedingungen</span>
+  </footer>
+</body>
+
+</html>

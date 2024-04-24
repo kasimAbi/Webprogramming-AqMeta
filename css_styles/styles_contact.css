@@ -1,0 +1,169 @@
+/* Größe vom gesamten Fenster */
+.hauptteil {
+  z-index: 4;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+/* Container und hintergrund für die form */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 754px;
+  padding: 32px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* das kontakt formular */
+.form {
+  width: 100%;
+  max-width: 820px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 410px);
+}
+
+.contact-form {
+  background-color: #0E2531;
+  position: relative;
+}
+
+/* erzeugt einen rechteck und dreht es um 45 grad */
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #0E2531;
+  /* um 45 grad drehen */
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+/* form: padding hinzufügen */
+form {
+  padding: 37px 37px;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+/* titel von form */
+.title {
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* container für eingaben von form */
+.input-container {
+  position: relative;
+  margin: 16px 0;
+}
+
+/* eingabeelemente (indem fall nur für betreff) */
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 10px 19px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+/* eingabefeld für nachricht */
+textarea.input {
+  padding: 13px 19px;
+  min-height: 150px;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+
+/* label um zu kennzeichnen, was es für ein eingabefeld ist */
+.input-container label {
+  position: absolute;
+  background: #0E2531;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 6.5px;
+  color: #fafafa;
+  font-size: 14.5px;
+  font-weight: 400;
+  /* das objekt ist nicht anklickbar bzw. wählbar. das was drunter ist, wird angeklickt */
+  pointer-events: none;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 16px;
+}
+
+/* submit button */
+.btn {
+  padding: 10px 21px;
+  background-color: white;
+  border: 2px solid #fafafa;
+  font-size: 15px;
+  color: #0E2531;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+
+/* bei hover soll hintergrund transparent sein und schrift weiß */
+.btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.contact-info {
+  padding: 37px 35px;
+  position: relative;
+}
+
+.contact-info .title {
+  color: #0E2531;
+}
+
+.text {
+  color: #333333;
+  margin: 25px 0 32px 0;
+}
+
+/* informationen zum unternehmen */
+.information {
+  display: flex;
+  color: #555555;
+  margin: 11px 0;
+  align-items: center;
+  font-size: 15px;
+}
+
+.icon {
+  width: 28px;
+  margin-right: 11px;
+}

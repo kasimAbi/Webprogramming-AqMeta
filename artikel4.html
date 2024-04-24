@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css dateien einbinden  -->
+  <link rel="stylesheet" href="css_styles/styles_article.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_article.css">
+  <link rel="stylesheet" href="css_styles/styles_allgemein.css">
+  <link rel="stylesheet" href="css_skalierung/skalierung_allgemein.css">
+
+  <!-- javascript dateien einbinden -->
+  <script src="js/script_artikel.js"></script>
+
+  <!-- die originale pixelgröße auf allen geräten und größen beibehalten -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- titel der seite  -->
+  <title>AqMETA-Aq-NEO for Her</title>
+</head>
+
+<!-- beim erstellen wird die funktion aufgeführt, damit das erste Bild beim slider geladen wird.  -->
+<body onload="plusSlides(0)">
+  <!-- z-index: 5 damit das immer im vordergrund bleibt und über jedes element drüber geht.  -->
+  <nav style="z-index: 5;">
+    <!-- ungeordnete liste -->
+    <ul>
+      <li><a href="index.html" style="padding: 0;"><img src="img/logo.png" title="AqMeta" class="logo_bild"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kat_shop.html" style="color: #388bba;">Shop</a> <!-- da die aktuelle seite ein teil des shops ist, soll bei der navigation entsprechend gekennzeichnet sein..  -->
+        <ul>
+          <li><a href="kat_boards.html">Boards</a></li>
+          <li><a href="kat_swimwear.html">Swimwear</a></li>
+          <li><a href="kat_equip.html">Equipment</a></li>
+          <li><a href="kat_merch.html">Merch</a></li>
+        </ul>
+      </li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- hauptfenster -->
+  <main class="hauptteil">
+    <!-- flex-container -->
+    <div class="shop-art-flex">
+      <!-- flex box -->
+      <div class="shop-art-box-1">
+
+        <!-- slide bilder -->
+        <div class="mySlides fade">
+          <!-- bilderreihenfolge -->
+          <div class="numbertext">1 / 2</div>
+          <img alt="" src="img/wetg1.png" style="width:100%;"> <!-- bild wird geladen -->
+        </div>
+
+        <div class="mySlides fade">
+          <!-- bilderreihenfolge -->
+          <div class="numbertext">2 / 2</div>
+          <img alt="" src="img/wetg2.png" style="width:100%;"> <!-- bild wird geladen -->
+        </div>
+
+        <!-- bilder wechseln -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!-- flex box -->
+      <div class="shop-art-box-2">
+        <!-- artikel informationen -->
+        <h1>Aq-NEO for Her</h1>
+        <p style="margin-top: 10px;">Preis: 74,99€</p>
+        <p>Farbe: Schwarz</p>
+
+        <div class="select-box">
+          <!-- select box um größe auszuwählen für das artikel -->
+          <select>
+            <!-- erste value ist nach der wahl nicht mehr anklickbar -->
+            <option disabled selected value>Größe wählen</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </div>
+
+        <p class="article-description">Produktbeschreibung</p>
+        <!-- ungeordnete liste -->
+        <ul style="margin-left: 15px;">
+          <li>
+            <p>Art: Neoprenanzug </p>
+          </li>
+          <li>
+            <p>Stil: Steamer</p>
+          </li>
+          <li>
+            <p>Neoprendicke: 3/2 mm</p>
+          </li>
+          <li>
+            <p>Wassertemperatur: 15+ °C</p>
+          </li>
+          <li>
+            <p>Verschluss: Front Zip</p>
+          </li>
+        </ul>
+        <!-- hat keine funktion -->
+        <a href="#produkt-im-warenkorb-gelegt.">
+          <div class="button-warenkorb">
+            <p>In den Warenkorb</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer style="z-index: 1;">
+    <span>Deutschland</span>
+    <span>Cookie-Einstellungen</span>
+    <span>Daten Verwalten</span>
+    <span>Datenschutz-Center</span>
+    <span>Cookies</span>
+    <span>Datenschutzerklärung</span>
+    <span>Bedingungen</span>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* hauptteil Fenstergröße einstellen */
+.hauptteil {
+  z-index: 1;
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+/* container für die einzelnen auswahlmöglichkeiten */
+.shop-kat-flex {
+  z-index: 1;
+  display: flex;
+  width: 1020px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* auswahlboxen */
+.shop-kat-box {
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* bilder */
+.shop-kat-bild {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Bild zudecken mit einem overlay aber die durchsichtigkeit ist auf 100%.
+in 0.25 sekunden soll eine animation abspielen, undzwar das das Overlay die durchsichtigkeit auf 0 macht
+und der Inhalt hoch rutscht.*/
+.image_overlay {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: berlin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+/* macht etwas verschwommen. nicht in image_overlay weil es nur für ein bild benutzt wird */
+.image_overlay_blur {
+  backdrop-filter: blur(15px);
+}
+
+/* animiert das overlay, das es hoch rutscht und dadurch besser aussieht */
+.image_overlay>* {
+  transform: translateY(50px);
+  transition: transform 0.25s;
+}
+
+/* wenn Mauszeiger drauf kommt, soll nicht mehr durchsichtig werden */
+.image_overlay:hover {
+  opacity: 1;
+}
+
+/* animiert das overlay, das es hoch rutscht wenn der Mauszeiger drüber fährt */
+.image_overlay:hover>* {
+  transform: translateY(0);
+}
+
+/* overlay titel */
+.image_title {
+  z-index: 5;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* overlay beschreibung */
+.image_description {
+  z-index: 5;
+  font-size: 20px;
+  margin-top: 10px;
+}

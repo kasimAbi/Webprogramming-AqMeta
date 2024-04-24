@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- css dateien einbinden  -->
+	<link rel="stylesheet" href="css_styles/styles_login.css">
+	<link rel="stylesheet" href="css_styles/styles_allgemein.css">
+	<link rel="stylesheet" href="css_skalierung/skalierung_allgemein.css">
+	<link rel="stylesheet" href="css_skalierung/skalierung_login.css">
+	<link rel="stylesheet" href="css_styles/styles_alert.css">
+	<link rel="stylesheet" href="css_skalierung/skalierung_alert.css">
+
+	<!-- javascript dateien einbinden. -->
+	<script src="js/script.js"></script>
+
+	<!-- die originale pixelgröße auf allen geräten und größen beibehalten -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- titel der seite  -->
+	<title>AqMETA-Login</title>
+</head>
+
+<!-- beim start der seite wird geprüft, ob der benutzer bereits einen account hat, anhand von localStorage. das ist ein javascript function.  -->
+<body onload="start_login()">
+	<!-- z-index: 5 damit das immer im vordergrund bleibt und über jedes element drüber geht.  -->
+	<nav style="z-index: 5;">
+		<!-- ungeordnete liste -->
+		<ul>
+			<li><a href="index.html" style="padding: 0;"><img alt="" src="img/logo.png" title="AqMeta" class="logo_bild"></a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="kat_shop.html">Shop</a>
+				<ul>
+					<li><a href="kat_boards.html">Boards</a></li>
+					<li><a href="kat_swimwear.html">Swimwear</a></li>
+					<li><a href="kat_equipment.html">Equipment</a></li>
+					<li><a href="kat_merch.html">Merch</a></li>
+				</ul>
+			</li>
+			<li><a href="login.html" style="color: #388bba;">Login</a></li> <!-- da die aktuelle seite das login Fenster ist, soll bei der navigation entsprechend gekennzeichnet sein..  -->
+			<li><a href="contact.html">Kontakt</a></li>
+		</ul>
+	</nav>
+
+	<!-- hauptteil: hier wird  gesamtgröße von dem hauptfenster festgelegt.  -->
+	<main class="hauptteil">
+		<!-- card: das eigentliche Kontaktformular  -->
+		<div class="card">
+			<img alt="" id="profile-img" class="profile-img-card" src="img/login.png" /> <!-- bild wird gesetzt  -->
+			<!-- form / wenn button mit typ submit geklickt wird, wird die function von javascript onLoginClick() ausgeführt  -->
+			<form class="form-signin" id="loginForm" onsubmit="onLoginClick()">
+				<input type="text" id="inputFirstName" class="eingabe-text register" placeholder="Vorname" required autofocus> <!-- autofocus: wandert cursor direkt auf das feld -->
+				<input type="text" id="inputName" class="eingabe-text register" placeholder="Nachname" required> <!-- required: pflichtfeld nach UI Design Pattern  -->
+				<input type="email" id="inputEmail" class="eingabe-text" placeholder="E-Mail" required> <!-- placeholder: Platzhalter bis Eingabe getätigt wurde -->
+				<input type="password" id="inputPassword" class="eingabe-text" placeholder="Passwort" required>
+				<input type="text" id="inputCity" class="eingabe-text register" placeholder="Stadt">
+				<input type="text" id="inputZipcode" pattern="[+0-9]{5}" class="eingabe-text register" placeholder="PLZ"> <!-- pattern: [0-9] -> nur zahlen von 0 bis 9 erlaubt, {5} -> max. 5 symbole -->
+				<input type="text" id="inputStreet" class="eingabe-text register" placeholder="Straße">
+				<input type="text" id="inputHousenumber" class="eingabe-text register" placeholder="Hausnummer">
+				<button class="btn btn-signin" type="submit">Login</button> <!-- type: submit -> bei button klick wird onsubmit ausgeführt. -->
+			</form><!-- /form -->
+			<a id="button-register" onclick="hide_daten()" class="text-center">
+				Schon registriert?
+			</a>
+		</div><!-- /card -->
+	</main><!-- /hauptteil -->
+
+	<!-- footer mit spans -->
+	<footer style="z-index: 1;">
+		<span>Deutschland</span>
+		<span>Cookie-Einstellungen</span>
+		<span>Daten Verwalten</span>
+		<span>Datenschutz-Center</span>
+		<span>Cookies</span>
+		<span>Datenschutzerklärung</span>
+		<span>Bedingungen</span>
+	</footer>
+</body>
+
+</html>

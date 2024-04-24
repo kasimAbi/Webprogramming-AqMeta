@@ -1,0 +1,51 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 1210px) {
+  .main-flex {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    height: auto;
+  }
+
+  .main-box {
+    margin: 10px 10px;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 70px;
+  }
+
+  .header-box {
+    max-width: 510px;
+    margin-right: 0;
+  }
+
+  .header-box:first-child {
+    flex: none;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-flex {
+    width: 300px;
+  }
+
+  .vorschau-bild {
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}

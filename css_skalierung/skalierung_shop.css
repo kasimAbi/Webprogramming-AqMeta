@@ -1,0 +1,41 @@
+/* änderungen bei verschiedenen pixelgrößen */
+@media screen and (max-width: 1100px) {
+  .hauptteil {
+    margin-top: 15%;
+    margin-bottom: 3%;
+  }
+
+  .shop-kat-flex {
+    width: 500px;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .shop-kat-bild {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hauptteil {
+    margin-top: 17%;
+    margin-bottom: 3%;
+  }
+
+  .shop-kat-flex {
+    width: 300px;
+  }
+
+  .image_overlay {
+    height: 210px;
+  }
+
+  .image_title {
+    font-size: 30px;
+  }
+
+  .image_description {
+    font-size: 16px;
+  }
+}
